@@ -1,0 +1,7 @@
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteRule ^tp1$ /tp1/index.html [L]
+RewriteRule ^tp2$ /tp2/index.html [L]
+RewriteRule ^tp3$ /tp3/index.html [L]

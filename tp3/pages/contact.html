@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Codera</title>
+  <meta name="description" content="Contactez Codera pour un devis, une question ou un partenariat. Réponse sous 48h." />
+  <meta property="og:title" content="Contact — Codera" />
+  <meta property="og:description" content="Contactez-nous pour un devis gratuit ou toute question." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codera.example.com/pages/contact.html" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">CODE<span>RA</span></div>
+    <div class="tagline">L'ère du code</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Galerie</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="section">
+      <h1>Contactez-nous</h1>
+
+      <div class="contact-grid">
+
+        <div class="contact-form">
+          <form action="#" method="post" novalidate>
+
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name" placeholder="Votre nom" title="Veuillez saisir votre nom" />
+
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name" placeholder="Votre prénom" title="Veuillez saisir votre prénom" />
+
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="vous@exemple.com" title="Veuillez saisir une adresse e-mail valide" />
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel" pattern="^(\+212|0)[5-7]\d{8}$" placeholder="+212 6 00 00 00 00" title="Format marocain : +212600000000 ou 0600000000" />
+
+            <label for="societe">Société</label>
+            <input type="text" id="societe" name="societe" autocomplete="organization" placeholder="Nom de votre entreprise" />
+
+            <label for="sujet">Sujet *</label>
+            <select id="sujet" name="sujet" required title="Veuillez choisir un sujet">
+              <option value="">-- Choisissez un sujet --</option>
+              <option value="devis">Demande de devis</option>
+              <option value="info">Renseignement</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="formation">Formation</option>
+              <option value="autre">Autre</option>
+            </select>
+
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required maxlength="1000" placeholder="Décrivez votre besoin... (1000 caractères max)" title="Veuillez saisir votre message" autocomplete="off"></textarea>
+
+            <label for="budget">Budget estimé (MAD)</label>
+            <input type="range" id="budget" name="budget" min="5000" max="200000" step="5000" value="20000" />
+
+            <label for="delai">Date souhaitée de démarrage</label>
+            <input type="date" id="delai" name="delai" autocomplete="off" />
+
+            <label>
+              <input type="checkbox" name="cgu" value="oui" required title="Vous devez accepter la politique de confidentialité" />
+              J'accepte la <a href="#" target="_blank" rel="noopener noreferrer">politique de confidentialité</a> *
+            </label>
+
+            <br /><br />
+            <button type="submit" class="btn">Envoyer</button>
+            <button type="reset" style="margin-left:0.5rem; padding:0.7rem 1.5rem; border:1px solid #1a1a2e; background:#fff; cursor:pointer; font-family:Arial,sans-serif;">Réinitialiser</button>
+
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>Nos coordonnées</h3>
+          <p><strong>Adresse :</strong> 12 Rue Al Oumaima, Casablanca 20250, Maroc</p>
+          <p><strong>Téléphone :</strong> +212 5 22 00 00 00</p>
+          <p><strong>E-mail :</strong> contact@codera.example.com</p>
+          <p><strong>Horaires :</strong> Lundi–Vendredi, 9h–18h</p>
+
+          <!--
+            CARTE : iframe OpenStreetMap — centré sur Casablanca
+            Modifier les coordonnées bbox si besoin
+          -->
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-7.65%2C33.55%2C-7.55%2C33.62&layer=mapnik"
+            title="Localisation de Codera sur la carte, Casablanca"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>CODERA</h4>
+        <p>Solutions numériques pour les entreprises qui avancent.</p>
+      </div>
+      <div>
+        <h4>Plan du site</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>contact@codera.example.com</p>
+        <p>+212 5 22 00 00 00</p>
+        <p>Casablanca, Maroc</p>
+      </div>
+      <div>
+        <h4>Mentions légales</h4>
+        <ul>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Codera — Tous droits réservés</p>
+    </div>
+  </footer>
+
+</body>
+</html>

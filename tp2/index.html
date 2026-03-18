@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire d'inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.3rem;
+      font-size: 1.6rem;
+    }
+
+    header p {
+      margin: 0;
+      color: #bbb;
+      font-size: 0.85rem;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    form {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 2rem;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #1a1a2e;
+      padding: 0 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.88rem;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="password"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem 0.7rem;
+      border: 1px solid #ccc;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      background: #fafafa;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid #1a1a2e;
+      border-color: #1a1a2e;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 0.4rem;
+    }
+
+    label.inline {
+      display: inline;
+      font-weight: normal;
+    }
+
+    .radio-group label,
+    .check-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 2rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    button[type="submit"]:hover {
+      background: #2d2d5e;
+    }
+
+    button[type="reset"] {
+      background: #fff;
+      color: #1a1a2e;
+      border: 1px solid #1a1a2e;
+      padding: 0.7rem 1.5rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      margin-left: 0.5rem;
+    }
+
+    button[type="reset"]:hover {
+      background: #f0f0f0;
+    }
+
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Inscription</h1>
+    <p>Tous les champs marqués d'un <abbr title="obligatoire">*</abbr> sont obligatoires.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
+      <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" required autocomplete="family-name" placeholder="Bakkas" title="Veuillez saisir votre nom" />
+
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" required autocomplete="given-name" placeholder="Nassim" title="Veuillez saisir votre prénom" />
+
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="exemple@mail.com" title="Veuillez saisir une adresse e-mail valide" />
+
+        <label for="telephone">Téléphone *</label>
+        <input type="tel" id="telephone" name="telephone" required autocomplete="tel" pattern="^(\+33|0)[1-9](\d{2}){4}$" placeholder="0612345678" title="Format attendu : 0612345678 ou +33612345678" />
+
+        <label for="naissance">Date de naissance *</label>
+        <input type="date" id="naissance" name="naissance" required autocomplete="bday" max="2007-03-18" title="Vous devez avoir au moins 18 ans" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Sécurité du compte</legend>
+
+        <label for="motdepasse">Mot de passe *</label>
+        <input type="password" id="motdepasse" name="motdepasse" required autocomplete="new-password" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d).{8,}$" title="Minimum 8 caractères, au moins 1 majuscule et 1 chiffre" />
+
+        <label for="confirmer">Confirmer le mot de passe *</label>
+        <input type="password" id="confirmer" name="confirmer" required autocomplete="new-password" minlength="8" pattern="^(?=.*[A-Z])(?=.*\d).{8,}$" title="Doit correspondre au mot de passe saisi" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Localisation</legend>
+
+        <label for="pays">Pays *</label>
+        <select id="pays" name="pays" required autocomplete="country-name" title="Veuillez sélectionner votre pays">
+          <option value="">-- Sélectionnez un pays --</option>
+          <option value="MA">Maroc</option>
+          <option value="FR">France</option>
+          <option value="DZ">Algérie</option>
+          <option value="TN">Tunisie</option>
+          <option value="BE">Belgique</option>
+          <option value="CH">Suisse</option>
+          <option value="CA">Canada</option>
+          <option value="SN">Sénégal</option>
+          <option value="CI">Côte d'Ivoire</option>
+          <option value="ES">Espagne</option>
+        </select>
+
+        <label for="ville">Ville (ou saisissez la vôtre)</label>
+        <input type="text" id="ville" name="ville" autocomplete="address-level2" list="liste-villes" placeholder="Casablanca" />
+        <datalist id="liste-villes">
+          <option value="Casablanca" />
+          <option value="Rabat" />
+          <option value="Marrakech" />
+          <option value="Fès" />
+          <option value="Mohammedia" />
+          <option value="Béni Mellal" />
+          <option value="Paris" />
+          <option value="Alger" />
+          <option value="Tunis" />
+        </datalist>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Genre *</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="genre" value="homme" required /> Homme</label>
+          <label><input type="radio" name="genre" value="femme" /> Femme</label>
+          <label><input type="radio" name="genre" value="autre" /> Autre / Non précisé</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Centres d'intérêt</legend>
+        <div class="check-group">
+          <label><input type="checkbox" name="interets" value="cybersecurite" /> Cybersécurité</label>
+          <label><input type="checkbox" name="interets" value="programmation" /> Programmation</label>
+          <label><input type="checkbox" name="interets" value="reseaux" /> Réseaux</label>
+          <label><input type="checkbox" name="interets" value="ia" /> Intelligence artificielle</label>
+          <label><input type="checkbox" name="interets" value="sport" /> Sport</label>
+          <label><input type="checkbox" name="interets" value="musique" /> Musique</label>
+          <label><input type="checkbox" name="interets" value="lecture" /> Lecture</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Profil</legend>
+
+        <label for="biographie">Biographie</label>
+        <textarea id="biographie" name="biographie" rows="5" maxlength="500" placeholder="Présentez-vous en quelques mots... (500 caractères maximum)" autocomplete="off"></textarea>
+
+        <label for="photo">Photo de profil</label>
+        <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/webp" title="Formats acceptés : JPG, PNG, WebP" />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Conditions d'utilisation</legend>
+
+        <label>
+          <input type="checkbox" name="cgu" value="oui" required title="Vous devez accepter les CGU" />
+          J'accepte les <a href="#" target="_blank" rel="noopener noreferrer">conditions générales d'utilisation</a> *
+        </label>
+        <br /><br />
+        <label>
+          <input type="checkbox" name="newsletter" value="oui" />
+          Je souhaite recevoir la newsletter
+        </label>
+
+      </fieldset>
+
+      <button type="submit">Créer mon compte</button>
+      <button type="reset">Réinitialiser</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 — Formulaire d'inscription HTML5</p>
+  </footer>
+
+</body>
+</html>

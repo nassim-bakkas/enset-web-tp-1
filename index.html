@@ -1,14 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>c3-az-daaif — Travaux Pratiques HTML/CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0;
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+    }
+
+    .tp-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .tp-list li a {
+      display: block;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-left: 5px solid #1a1a2e;
+      padding: 1.25rem 1.5rem;
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .tp-list li a:hover {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    .tp-list li a span {
+      display: block;
+      font-weight: normal;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      color: #777;
+    }
+
+    .tp-list li a:hover span {
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <a href="tp1.html">Go to TP1</a>
-    <a href="tp2.html">Go to TP2</a>
-    <a href="tp3.html">Go to TP3</a>
+
+  <header>
+    <h1>c3-az-daaif.enset.ma</h1>
+    <p>Travaux Pratiques HTML5 &amp; CSS — Nassim Bakkas</p>
+  </header>
+
+  <main>
+    <h2>Sélectionnez un TP :</h2>
+    <ul class="tp-list">
+      <li>
+        <a href="tp1/index.html">
+          TP 1 — Page de présentation personnelle
+          <span>CV / Portfolio personnel avec structure sémantique HTML5</span>
+        </a>
+      </li>
+      <li>
+        <a href="tp2/index.html">
+          TP 2 — Formulaire d'inscription
+          <span>Formulaire complet avec validation HTML5</span>
+        </a>
+      </li>
+      <li>
+        <a href="tp3/index.html">
+          TP 3 — Site vitrine multi-pages
+          <span>Site Codera — 5 pages avec navigation, galerie et contact</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nassim Bakkas — ENSET Mohammedia, Cybersécurité</p>
+  </footer>
+
 </body>
 </html>
