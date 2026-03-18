@@ -1,11 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire d'inscription</title>
 </head>
 <body>
-    <h1>tp2</h1>
+
+  <header>
+    <h1>Formulaire d'inscription</h1>
+    <p>Tous les champs marqués d'un <abbr title="obligatoire">*</abbr> sont obligatoires.</p>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
+      <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label for="nom">Nom *</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          required
+          autocomplete="family-name"
+          placeholder="Bakkas"
+          title="Veuillez saisir votre nom de famille"
+        />
+
+        <br />
+
+        <label for="prenom">Prénom *</label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          required
+          autocomplete="given-name"
+          placeholder="Nassim"
+          title="Veuillez saisir votre prénom"
+        />
+
+        <br />
+
+        <label for="email">Adresse e-mail *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder="exemple@mail.com"
+          title="Veuillez saisir une adresse e-mail valide (ex: nom@domaine.com)"
+        />
+
+        <br />
+
+        <label for="telephone">Téléphone *</label>
+        <input
+          type="tel"
+          id="telephone"
+          name="telephone"
+          required
+          autocomplete="tel"
+          pattern="^(\+33|0)[1-9](\d{2}){4}$"
+          placeholder="0612345678"
+          title="Format français attendu : 0612345678 ou +33612345678"
+        />
+
+        <br />
+
+        <label for="naissance">Date de naissance *</label>
+        <input
+          type="date"
+          id="naissance"
+          name="naissance"
+          required
+          autocomplete="bday"
+          max="2007-03-18"
+          title="Vous devez avoir au moins 18 ans pour vous inscrire"
+        />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Sécurité du compte</legend>
+
+        <label for="motdepasse">Mot de passe *</label>
+        <input
+          type="password"
+          id="motdepasse"
+          name="motdepasse"
+          required
+          autocomplete="new-password"
+          minlength="8"
+          pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+          title="Minimum 8 caractères, au moins 1 majuscule et 1 chiffre"
+        />
+
+        <br />
+
+        <label for="confirmer">Confirmer le mot de passe *</label>
+        <input
+          type="password"
+          id="confirmer"
+          name="confirmer"
+          required
+          autocomplete="new-password"
+          minlength="8"
+          pattern="^(?=.*[A-Z])(?=.*\d).{8,}$"
+          title="Doit correspondre exactement au mot de passe saisi ci-dessus"
+        />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Localisation</legend>
+
+        <label for="pays">Pays *</label>
+        <select
+          id="pays"
+          name="pays"
+          required
+          autocomplete="country-name"
+        >
+          <option value="">-- Sélectionnez un pays --</option>
+          <option value="MA">Maroc</option>
+          <option value="FR">France</option>
+          <option value="DZ">Algérie</option>
+          <option value="TN">Tunisie</option>
+          <option value="BE">Belgique</option>
+          <option value="CH">Suisse</option>
+          <option value="CA">Canada</option>
+          <option value="SN">Sénégal</option>
+          <option value="CI">Côte d'Ivoire</option>
+          <option value="ES">Espagne</option>
+        </select>
+
+        <br />
+
+        <label for="ville">Ville (ou saisissez la vôtre)</label>
+        <input
+          type="text"
+          id="ville"
+          name="ville"
+          autocomplete="address-level2"
+          list="liste-villes"
+          placeholder="Casablanca"
+          title="Saisissez votre ville"
+        />
+        <datalist id="liste-villes">
+          <option value="Casablanca" />
+          <option value="Rabat" />
+          <option value="Marrakech" />
+          <option value="Fès" />
+          <option value="Mohammedia" />
+          <option value="Béni Mellal" />
+          <option value="Paris" />
+          <option value="Lyon" />
+          <option value="Alger" />
+          <option value="Tunis" />
+        </datalist>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Genre *</legend>
+
+        <label>
+          <input type="radio" name="genre" value="homme" required />
+          Homme
+        </label>
+
+        <label>
+          <input type="radio" name="genre" value="femme" />
+          Femme
+        </label>
+
+        <label>
+          <input type="radio" name="genre" value="autre" />
+          Autre / Non précisé
+        </label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Centres d'intérêt</legend>
+
+        <label>
+          <input type="checkbox" name="interets" value="cybersecurite" />
+          Cybersécurité
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="programmation" />
+          Programmation
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="reseaux" />
+          Réseaux
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="ia" />
+          Intelligence artificielle
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="sport" />
+          Sport
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="musique" />
+          Musique
+        </label>
+
+        <label>
+          <input type="checkbox" name="interets" value="lecture" />
+          Lecture
+        </label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Profil</legend>
+
+        <label for="biographie">Biographie</label>
+        <br />
+        <textarea
+          id="biographie"
+          name="biographie"
+          rows="5"
+          cols="40"
+          maxlength="500"
+          placeholder="Présentez-vous en quelques mots... (500 caractères maximum)"
+          autocomplete="off"
+        ></textarea>
+
+        <br />
+
+        <label for="photo">Photo de profil</label>
+        <input
+          type="file"
+          id="photo"
+          name="photo"
+          accept="image/jpeg,image/png,image/webp"
+          title="Formats acceptés : JPG, PNG, WebP"
+        />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Conditions d'utilisation</legend>
+
+        <label>
+          <input type="checkbox" name="cgu" value="oui" required
+            title="Vous devez accepter les CGU pour créer un compte" />
+          J'accepte les <a href="#" target="_blank" rel="noopener noreferrer">conditions générales d'utilisation</a> *
+        </label>
+
+        <br />
+
+        <label>
+          <input type="checkbox" name="newsletter" value="oui" />
+          Je souhaite recevoir la newsletter
+        </label>
+
+      </fieldset>
+
+      <button type="submit">Créer mon compte</button>
+      <button type="reset">Réinitialiser</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 — Formulaire d'inscription HTML5</p>
+  </footer>
+
 </body>
 </html>
